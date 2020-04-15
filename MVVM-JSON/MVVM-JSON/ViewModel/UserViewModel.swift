@@ -22,7 +22,10 @@ class UserViewModel {
                 if let data = data {
                     do {
                         let userResponse = try JSONDecoder().decode([UserModel].self, from: data)
-                        print(userResponse)
+                        self.usersArray.append(contentsOf: userResponse)
+                        DispatchQueue.main.async {
+                            self.vc?.userTableView.reloadData()
+                        }
                     }catch let err {
                         print(err.localizedDescription)
                     }
