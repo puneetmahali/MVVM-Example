@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,7 @@
 		8EC66C21244786C900A5232D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC66C1F244786C900A5232D /* LaunchScreen.storyboard */; };
 		8EC66C2C244786C900A5232D /* MVVM_JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66C2B244786C900A5232D /* MVVM_JSONTests.swift */; };
 		8EC66C37244786C900A5232D /* MVVM_JSONUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66C36244786C900A5232D /* MVVM_JSONUITests.swift */; };
-		8EC66C4824478D4F00A5232D /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66C4724478D4E00A5232D /* Json4Swift_Base.swift */; };
+		8EC66C4824478D4F00A5232D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66C4724478D4E00A5232D /* UserModel.swift */; };
 		8EC66C4A24478E2400A5232D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66C4924478E2400A5232D /* UserViewModel.swift */; };
 		8EC66C4E2447966400A5232D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66C4C2447966400A5232D /* UserCell.swift */; };
 		8EC66C4F2447966400A5232D /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC66C4D2447966400A5232D /* UserCell.xib */; };
@@ -60,7 +60,7 @@
 		8EC66C32244786C900A5232D /* MVVM-JSONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-JSONUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC66C36244786C900A5232D /* MVVM_JSONUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_JSONUITests.swift; sourceTree = "<group>"; };
 		8EC66C38244786C900A5232D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EC66C4724478D4E00A5232D /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		8EC66C4724478D4E00A5232D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8EC66C4924478E2400A5232D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		8EC66C4C2447966400A5232D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		8EC66C4D2447966400A5232D /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		8EC66C442447872D00A5232D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8EC66C4724478D4E00A5232D /* Json4Swift_Base.swift */,
+				8EC66C4724478D4E00A5232D /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,7 +199,6 @@
 				31F1B2EC46A07166A3A19437 /* Pods-MVVM-JSONTests.debug.xcconfig */,
 				6E61C51EF6F78DE40D99ED75 /* Pods-MVVM-JSONTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -454,7 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC66C19244786BC00A5232D /* ViewController.swift in Sources */,
-				8EC66C4824478D4F00A5232D /* Json4Swift_Base.swift in Sources */,
+				8EC66C4824478D4F00A5232D /* UserModel.swift in Sources */,
 				8EC66C4E2447966400A5232D /* UserCell.swift in Sources */,
 				8EC66C15244786BC00A5232D /* AppDelegate.swift in Sources */,
 				8EC66C4A24478E2400A5232D /* UserViewModel.swift in Sources */,

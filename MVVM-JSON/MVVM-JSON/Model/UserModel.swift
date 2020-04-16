@@ -12,6 +12,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
+import UIKit
+
 struct UserModel : Codable {
 	let userId : Int?
 	let id : Int?
@@ -33,5 +35,14 @@ struct UserModel : Codable {
 		title = try values.decodeIfPresent(String.self, forKey: .title)
 		completed = try values.decodeIfPresent(Bool.self, forKey: .completed)
 	}
+    
+    
+    func getStatusColor() -> (String, UIColor) {
+        if completed ?? true {
+            return ("COMPLETED", .green)
+        }else{
+            return ("NOT COMPLETED", .red)
+        }
+    }
 
 }

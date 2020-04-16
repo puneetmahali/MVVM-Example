@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 class UserViewModel {
+    
     var usersArray = [UserModel]()
     weak var vc : ViewController?
     
@@ -36,6 +37,23 @@ class UserViewModel {
             }
             
         }.resume()
+    }
+    
+    //MARK: Using Alamofire
+    func getAllUsersDataWithAF() {
+        AF.request(mainURL).response { response in
+            if let data = response.data {
+                do {
+                    let userResponse = try JSONDecoder().decode([UserModel].self, from: data)
+                    self.usersArray.append(contentsOf: userResponse)
+                    DispatchQueue.main.async {
+                        self.vc?.userTableView.reloadData()
+                    }
+                }catch let err {
+                    print(err.localizedDescription)
+                }
+            }
+        }
     }
     
 }

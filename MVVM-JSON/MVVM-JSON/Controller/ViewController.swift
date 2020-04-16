@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewModelUser.vc = self
-        viewModelUser.getAllUsersData()
+        viewModelUser.getAllUsersDataWithAF()
         userTableView.register(UINib(nibName: "UserCell",bundle:nil), forCellReuseIdentifier: "UserCell")
     }
 
@@ -31,12 +31,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell
         let modelUser = viewModelUser.usersArray[indexPath.row]
-        if let id = modelUser.id {
-            cell?.lblID.text = "\(id)"
-        } else {
-            cell?.lblID.text = "No ID"
-        }
-        cell?.lblTitle.text = modelUser.title
+        cell?.modelUser = modelUser
         return cell!
         
     }
